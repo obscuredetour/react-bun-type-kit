@@ -1,0 +1,14 @@
+services:
+  react-bun-type-kit:
+    image: react-bun-type-kit
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - APP_ENV=production
+    ports:
+      - 80:80
+    container_name: react-bun-type-kit_container
+    volumes:
+      - ./:/app
+      - /app/node_modules
